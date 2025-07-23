@@ -1,4 +1,4 @@
-#Proyecto Gestión de Hoteles 
+# Proyecto Gestión de Hoteles 
 
 **Asignatura**: Base datos no estructuradas (TI3V32_140-3-Flex_V Puente Alto)
 
@@ -11,11 +11,11 @@
 
 --
 
-##Descripción
+## Descripción
 
 Este es un proyecto de sistema de gestión de hoteles desarrollado en Python, utilizando MongoDB como base de datos NoSQL. 
 
-###Permite:
+### Permite:
 
 - Conectarse a una BD en MongoDB
 - Crear hoteles con sus datos básicos (nombre, dirección, comuna, ciudad)
@@ -34,7 +34,7 @@ Este es un proyecto de sistema de gestión de hoteles desarrollado en Python, ut
 
 --
 
-##Para ejecutarlo:
+## Para ejecutarlo:
 - Instalar librería pymongo (pip install pymongo)
 - Configurar conexión a MongoDB (Database -> mongo.py, agregar usuario y contraseña)
 - Ejecutar el programa desde el archivo principal (main.py)
