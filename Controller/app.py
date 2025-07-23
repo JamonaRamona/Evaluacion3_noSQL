@@ -69,7 +69,7 @@ def menu_principal():
                     print("           B U S C A R   H O T E L           ")
                     print("=============================================")
                     while True:
-                        print("Seleccione alguna de las siguietnes opciones de búsqueda:")
+                        print("Seleccione alguna de las siguientes opciones de búsqueda:")
                         print("======================================")
                         print("1. Listar todos los hoteles")
                         print("2. Búsqueda por nombre")
