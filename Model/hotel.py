@@ -73,6 +73,21 @@ def buscar_ciudad_con_habitaciones_disponibles(ciudad, conexion):
     return resultados
 
 
+def buscar_hoteles_por_precio(precio, condicion, conexion):
+    coleccion = conexion.obtener_coleccion()
+
+    if condicion == "mayor_igual":
+        filtro = {"habitaciones": {"$elemMatch": {"precio": {"$gte": precio}}}}
+    elif condicion == "menor_igual":
+        filtro = {"habitaciones": {"$elemMatch": {"precio": {"$lte": precio}}}}
+    else:
+        print("Condición inválida.")
+        return []
+
+    resultados = list(coleccion.find(filtro))
+    return resultados
+
+
 #FUNCIONES DE CREATE (INSERT ONE)
 
 def agregar_hotel(hotel_nuevo, conexion):

@@ -1,6 +1,6 @@
 #para poder limpiar la consola
 from Database.mongo import ConexionMongo
-from Model.hotel import agregar_habitacion, agregar_hotel, buscar_ciudad_con_habitaciones_disponibles, buscar_hoteles_con_habitaciones_disponibles, buscar_hoteles_por_ciudad, buscar_hoteles_por_comuna, buscar_hoteles_por_id, buscar_hoteles_por_nombre, buscar_nombre_con_habitaciones_disponibles, editar_direccion_hotel, editar_habitacion_hotel, editar_nombre_hotel, eliminar_habitacion_hotel, eliminar_hotel, obtener_hoteles
+from Model.hotel import agregar_habitacion, agregar_hotel, buscar_ciudad_con_habitaciones_disponibles, buscar_hoteles_con_habitaciones_disponibles, buscar_hoteles_por_ciudad, buscar_hoteles_por_comuna, buscar_hoteles_por_id, buscar_hoteles_por_nombre, buscar_hoteles_por_precio, buscar_nombre_con_habitaciones_disponibles, editar_direccion_hotel, editar_habitacion_hotel, editar_nombre_hotel, eliminar_habitacion_hotel, eliminar_hotel, obtener_hoteles
 from View.funciones_mostrar import mostrar_habitaciones, mostrar_hotel, mostrar_nombre_id_direccion
 from View.funciones_solicitar import solicitar_agregar_habitacion, solicitar_edicion_habitacion, solicitar_hotel, solicitar_nueva_direccion
 
@@ -78,8 +78,9 @@ def menu_principal():
                         print("5. Búsqueda por comuna")
                         print("6. Hoteles con habitaciones disponibles")
                         print("7. Búsqueda por nombre (solo con habitaciones disponibles)")
-                        print("8. Búsqueda por ciudad (solo con habitaciones disponibles)")                        
-                        print("9. Volver al menú principal")
+                        print("8. Búsqueda por ciudad (solo con habitaciones disponibles)")
+                        print("9. Búsqueda de habitaciones por precio")                        
+                        print("10. Volver al menú principal")
                         print("=======================================")
                         
                         opcion_busqueda = input("\nSeleccione una opción: ")
@@ -172,8 +173,35 @@ def menu_principal():
                             else:
                                 print(f"\nNo se encontraron hoteles en '{ciudad}' con habitaciones disponibles.")
 
-
                         elif opcion_busqueda == "9":
+                            print("1. Precio menor o igual que")
+                            print("2. Precio mayor o igual que")
+
+                            subopcion = input("Seleccione una opción: ")
+                            if subopcion == "1":
+                                precio = int(input("Ingrese el precio límite: "))
+                                condicion = "menor_igual"
+                            elif subopcion == "2":
+                                precio = int(input("Ingrese el precio límite: "))
+                                condicion = "mayor_igual"
+                            else:
+                                print("Opción inválida.")
+                                continue
+
+                            resultados = buscar_hoteles_por_precio(precio, condicion, conexion)
+
+                            if resultados:
+                                for hotel in resultados:
+                                    if condicion == "mayor_igual":
+                                        hotel["habitaciones"] = [h for h in hotel["habitaciones"] if h["precio"] >= precio]
+                                    else:
+                                        hotel["habitaciones"] = [h for h in hotel["habitaciones"] if h["precio"] <= precio]
+
+                                    mostrar_hotel(hotel)
+                            else:
+                                print("No se encontraron hoteles con habitaciones en ese rango de precio.")
+
+                        elif opcion_busqueda == "10":
                             print("\nVolviendo al menú principal...")
                             ejecutar_accion = False
                             break
