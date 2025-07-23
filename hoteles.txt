@@ -1,0 +1,92 @@
+db.hoteles.insertMany([
+  {
+    "nombre": "Hotel Sol del Valle",
+    "direccion": {
+      "calle": "Av. del Mar",
+      "numero": 1234,
+      "comuna": "La Serena",
+      "ciudad": "La Serena",
+      "region": "Coquimbo"
+    },
+    "habitaciones": [
+      { "numero": "101", "tipo": "individual", "precio": 45000, "disponible": true },
+      { "numero": "102", "tipo": "doble", "precio": 60000, "disponible": false },
+      { "numero": "103", "tipo": "suite", "precio": 95000, "disponible": true },
+      { "numero": "104", "tipo": "doble", "precio": 60000, "disponible": true },
+      { "numero": "105", "tipo": "familiar", "precio": 85000, "disponible": false }
+    ]
+  },
+  {
+    "nombre": "Refugio del Bosque",
+    "direccion": {
+      "calle": "Camino al Volcán",
+      "numero": 789,
+      "comuna": "Pucón",
+      "ciudad": "Pucón",
+      "region": "Araucanía"
+    },
+    "habitaciones": [
+      { "numero": "201", "tipo": "cabaña", "precio": 75000, "disponible": true },
+      { "numero": "202", "tipo": "cabaña", "precio": 80000, "disponible": true },
+      { "numero": "203", "tipo": "suite", "precio": 110000, "disponible": false },
+      { "numero": "204", "tipo": "doble", "precio": 60000, "disponible": true },
+      { "numero": "205", "tipo": "individual", "precio": 40000, "disponible": true },
+      { "numero": "206", "tipo": "familiar", "precio": 90000, "disponible": false }
+    ]
+  },
+  {
+    "nombre": "Altos del Norte",
+    "direccion": {
+      "calle": "Ruta 5 Norte",
+      "numero": 500,
+      "comuna": "Antofagasta",
+      "ciudad": "Antofagasta",
+      "region": "Antofagasta"
+    },
+    "habitaciones": [
+      { "numero": "301", "tipo": "doble", "precio": 58000, "disponible": true },
+      { "numero": "302", "tipo": "suite", "precio": 120000, "disponible": false },
+      { "numero": "303", "tipo": "individual", "precio": 42000, "disponible": true },
+      { "numero": "304", "tipo": "familiar", "precio": 88000, "disponible": true },
+      { "numero": "305", "tipo": "doble", "precio": 58000, "disponible": false }
+    ]
+  },
+  {
+    "nombre": "Costa Sur Hotel Boutique",
+    "direccion": {
+      "calle": "Av. Perú",
+      "numero": 456,
+      "comuna": "Viña del Mar",
+      "ciudad": "Viña del Mar",
+      "region": "Valparaíso"
+    },
+    "habitaciones": [
+      { "numero": "401", "tipo": "suite", "precio": 130000, "disponible": true },
+      { "numero": "402", "tipo": "doble", "precio": 67000, "disponible": true },
+      { "numero": "403", "tipo": "individual", "precio": 49000, "disponible": true },
+      { "numero": "404", "tipo": "doble", "precio": 67000, "disponible": false },
+      { "numero": "405", "tipo": "familiar", "precio": 99000, "disponible": true },
+      { "numero": "406", "tipo": "suite", "precio": 135000, "disponible": false }
+    ]
+  },
+  {
+    "nombre": "Hotel Patagonia Mágica",
+    "direccion": {
+      "calle": "Cerro Guido",
+      "numero": 7890,
+      "comuna": "Natales",
+      "ciudad": "Puerto Natales",
+      "region": "Magallanes"
+    },
+    "habitaciones": [
+      { "numero": "501", "tipo": "cabaña", "precio": 85000, "disponible": true },
+      { "numero": "502", "tipo": "suite", "precio": 140000, "disponible": true },
+      { "numero": "503", "tipo": "familiar", "precio": 95000, "disponible": false },
+      { "numero": "504", "tipo": "doble", "precio": 69000, "disponible": true },
+      { "numero": "505", "tipo": "doble", "precio": 69000, "disponible": false },
+      { "numero": "506", "tipo": "individual", "precio": 48000, "disponible": true },
+      { "numero": "507", "tipo": "suite", "precio": 145000, "disponible": false }
+    ]
+  }
+])
+
