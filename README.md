@@ -9,8 +9,6 @@
 - Jorge Moreno
 - Benjamín Tobar
 
---
-
 ## Descripción
 
 Este es un proyecto de sistema de gestión de hoteles desarrollado en Python, utilizando MongoDB como base de datos NoSQL. 
@@ -32,7 +30,6 @@ Este es un proyecto de sistema de gestión de hoteles desarrollado en Python, ut
   - Nombre o ciudad *solo si tienen habitaciones disponibles*
 - Eliminar hoteles
 
---
 
 ## Para ejecutarlo:
 - Instalar librería pymongo (pip install pymongo)
