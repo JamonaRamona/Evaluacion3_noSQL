@@ -1,7 +1,9 @@
 #Proyecto Gestión de Hoteles 
 
 **Asignatura**: Base datos no estructuradas (TI3V32_140-3-Flex_V Puente Alto)
+
 **Profesor**: Michael Arjel
+
 **Integrantes**: 
 - Araceli Alvarado
 - Jorge Moreno
